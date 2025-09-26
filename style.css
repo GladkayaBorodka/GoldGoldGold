@@ -14,12 +14,13 @@
     --font-size-title: 36px;
 
     /* Colors */
-    --color-accent-yellow: #FED136;
-    --color-accent-yellow-hover: #fec812; /* Добавлен цвет для hover */
-    --color-dark: #222222;
-    --color-light: #ffffff;
-    --color-grey-text: #777777;
-    --color-border: #e5e5e5; /* Для границ добавил */
+    --color-accent: #FED136;
+    --color-accent-hover: #fec812;
+    --color-title: #222222;
+    --color-background: #ffffff;
+    --color-text-light: #ffffff;
+    --color-text-secondary: #777777;
+    --color-placeholder: #BBBBBB;
 }
 
 * {
@@ -30,8 +31,8 @@
 
 body {
     font-family: var(--font-main);
-    background-color: var(--color-light); 
-    color: var(--color-dark); 
+    background-color: var(--color-background); 
+    color: var(--color-title); 
     font-weight: var(--font-weight-regular);
 }
 
@@ -54,7 +55,7 @@ a {
 .section-title {
     font-size: var(--font-size-title);
     font-weight: var(--font-weight-bold);
-    color: var(--color-dark);
+    color: var(--color-title);
     text-align: center;
     margin-bottom: 80px;
     position: relative;
@@ -64,8 +65,7 @@ a {
 /* Header */
 .header {
     padding: 20px 0;
-    background-color: var(--color-light);
-    border-bottom: 1px solid var(--color-border); 
+    background-color: var(--color-background);
 }
 
 .header-container {
@@ -76,10 +76,9 @@ a {
 
 .header-logo {
     font-family: var(--font-logo);
-    font-size: 26px;
-    font-weight: var(--font-weight-bold);
-    color: var(--color-dark); 
-    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-accent); 
 }
 
 .header-list {
@@ -88,14 +87,16 @@ a {
 }
 
 .header-link {
-    color: var(--color-dark);
+    color: var(--color-accent);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-base);
-    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
 }
 
 .header-link:hover {
-    color: var(--color-accent-yellow); 
+    border-bottom-color: var(--color-accent); 
 }
 
 /* Services Section */
@@ -132,30 +133,29 @@ a {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
     margin-bottom: 15px;
-    color: var(--color-dark);
+    color: var(--color-title);
     text-transform: uppercase; 
 }
 
 .services-desc {
     font-family: var(--font-secondary);
     font-size: var(--font-size-base);
-    color: var(--color-grey-text); 
+    color: var(--color-text-secondary); 
     line-height: 1.6;
 }
 
 /* Contact Section */
 .contact {
     padding: 100px 0;
-    background-color: var(--color-dark);
+    background-color: var(--color-title);
 }
 
 .contact .section-title {
     margin-bottom: 60px;
-    color: var(--color-light);
+    color: var(--color-text-light);
 }
 
 .contact-form {
-    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -176,9 +176,9 @@ a {
 .contact-textarea {
     width: 100%; 
     padding: 15px;
-    border: 1px solid var(--color-dark); 
-    background-color: var(--color-light); 
-    color: var(--color-dark); 
+    border: 1px solid var(--color-title); 
+    background-color: var(--color-background); 
+    color: var(--color-title); 
     font-size: var(--font-size-base);
     font-family: var(--font-secondary);
 }
@@ -189,7 +189,7 @@ a {
 
 .contact-input::placeholder,
 .contact-textarea::placeholder {
-    color: var(--color-grey-text); 
+    color: var(--color-placeholder); 
 }
 
 .contact-textarea {
@@ -202,10 +202,10 @@ a {
 }
 
 .contact-button {
-    background-color: var(--color-accent-yellow);
+    background-color: var(--color-accent);
     border: none;
     padding: 15px 30px;
-    color: var(--color-dark); 
+    color: var(--color-title); 
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
@@ -214,5 +214,5 @@ a {
 }
 
 .contact-button:hover {
-    background-color: var(--color-accent-yellow-hover); 
+    background-color: var(--color-accent-hover); 
 }

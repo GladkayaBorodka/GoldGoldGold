@@ -11,7 +11,7 @@
     --font-size-base: 14px;
     --font-size-medium: 16px;
     --font-size-large: 18px;
-    --font-size-title: 36px;
+    --font-size-title: 40px;
 
     /* Colors */
     --color-accent: #FED136;
@@ -31,9 +31,11 @@
 
 body {
     font-family: var(--font-main);
-    background-color: var(--color-background); 
-    color: var(--color-title); 
+    background-color: var(--color-background);
+    color: var(--color-text-secondary);
     font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
 }
 
 ul {
@@ -46,8 +48,8 @@ a {
 
 /* Container */
 .container {
-    max-width: 942px; 
-    margin: 0 auto; 
+    max-width: 942px;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
@@ -57,14 +59,15 @@ a {
     font-weight: var(--font-weight-bold);
     color: var(--color-title);
     text-align: center;
-    margin-bottom: 80px;
-    position: relative;
-    text-transform: uppercase; 
+    margin-bottom: 87px;
+    text-transform: uppercase;
+    line-height: 75px;
+    letter-spacing: -1px;
 }
 
 /* Header */
 .header {
-    padding: 20px 0;
+    padding-top: 44px;
     background-color: var(--color-background);
 }
 
@@ -78,41 +81,41 @@ a {
     font-family: var(--font-logo);
     font-size: 36px;
     font-weight: var(--font-weight-regular);
-    color: var(--color-accent); 
+    color: var(--color-accent);
 }
 
 .header-list {
     display: flex;
-    gap: 35px;
+    gap: 10px;
 }
 
 .header-link {
     color: var(--color-accent);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-regular);
     font-size: var(--font-size-base);
-    padding-bottom: 5px;
+    padding: 10px;
     border-bottom: 2px solid transparent;
     transition: border-bottom-color 0.3s ease;
 }
 
 .header-link:hover {
-    border-bottom-color: var(--color-accent); 
+    border-bottom-color: var(--color-accent);
 }
 
 /* Services Section */
 .services {
-    padding: 100px 0;
+    padding: 110px 0 120px;
     text-align: center;
 }
 
 .services-list {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 55px;
 }
 
 .services-item {
-    flex-basis: 30%; 
+    flex-basis: 30%;
 }
 
 .services-icon-wrapper {
@@ -121,7 +124,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 25px auto; 
+    margin: 0 auto 25px auto;
 }
 
 .services-icon {
@@ -132,31 +135,24 @@ a {
 .services-name {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
-    margin-bottom: 15px;
     color: var(--color-title);
-    text-transform: uppercase; 
+    line-height: 75px;
 }
 
 .services-desc {
     font-family: var(--font-secondary);
-    font-size: var(--font-size-base);
-    color: var(--color-text-secondary); 
-    line-height: 1.6;
+    line-height: 100%;
 }
 
 /* Contact Section */
 .contact {
-    padding: 100px 0;
+    padding: 90px 0 115px;
     background-color: var(--color-title);
 }
 
 .contact .section-title {
-    margin-bottom: 60px;
+    margin-bottom: 115px;
     color: var(--color-text-light);
-}
-
-.contact-form {
-    margin: 0 auto;
 }
 
 .form-row {
@@ -174,22 +170,17 @@ a {
 
 .contact-input,
 .contact-textarea {
-    width: 100%; 
-    padding: 15px;
-    border: 1px solid var(--color-title); 
-    background-color: var(--color-background); 
-    color: var(--color-title); 
+    padding: 20px;
+    border: 1px solid #CCCCCC;
+    background-color: var(--color-background);
+    color: var(--color-text-secondary);
     font-size: var(--font-size-base);
-    font-family: var(--font-secondary);
-}
-
-.contact-input {
-    height: 53px;
+    font-family: var(--font-main);
 }
 
 .contact-input::placeholder,
 .contact-textarea::placeholder {
-    color: var(--color-placeholder); 
+    color: var(--color-placeholder);
 }
 
 .contact-textarea {
@@ -204,15 +195,17 @@ a {
 .contact-button {
     background-color: var(--color-accent);
     border: none;
-    padding: 15px 30px;
-    color: var(--color-title); 
-    font-size: var(--font-size-medium);
+    padding: 20px 40px;
+    color: var(--color-text-light);
+    font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
+    font-family: var(--font-main);
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .contact-button:hover {
-    background-color: var(--color-accent-hover); 
+    background-color: var(--color-accent-hover);
 }

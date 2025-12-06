@@ -1,19 +1,16 @@
 /* Base, Variables, and Reset */
 :root {
-    /* Fonts */
     --font-main: 'Montserrat', sans-serif;
     --font-secondary: 'Roboto Slab', serif;
     --font-logo: 'Bilbo Swash Caps', cursive;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
 
-    /* Font Sizes */
     --font-size-base: 14px;
     --font-size-medium: 16px;
     --font-size-large: 18px;
     --font-size-title: 40px;
 
-    /* Colors */
     --color-accent: #FED136;
     --color-accent-hover: #fec812;
     --color-title: #222222;
@@ -46,7 +43,6 @@ a {
     text-decoration: none;
 }
 
-/* Container */
 .container {
     max-width: 942px;
     margin: 0 auto;
@@ -61,7 +57,7 @@ a {
     text-align: center;
     margin-bottom: 87px;
     text-transform: uppercase;
-    line-height: 75px;
+    line-height: 1.2;
     letter-spacing: -1px; 
 }
 
@@ -82,6 +78,8 @@ a {
     font-size: 36px;
     font-weight: var(--font-weight-regular);
     color: var(--color-accent);
+    line-height: 1;
+    letter-spacing: 1px;
 }
 
 .header-list {
@@ -118,38 +116,55 @@ a {
     flex-basis: 30%;
 }
 
-.services-icon-wrapper {
-    width: 100px;
-    height: 100px;
+/* НОВЕ: Стилі для обгортки-кола */
+.services-icon-circle {
+    /* Задаємо розмір кола (можна коригувати під макет) */
+    width: 76px; 
+    height: 76px;
+    /* Жовта рамка */
+    border: 3px solid var(--color-accent); 
+    /* Робимо коло */
+    border-radius: 50%; 
+    /* Центруємо іконку всередині кола */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 25px auto;
+    /* Центруємо саме коло і додаємо відступ знизу */
+    margin: 0 auto 25px auto; 
 }
 
+/* ОНОВЛЕНО: Стилі для самої іконки */
 .services-icon {
-    width: 48px;
-    height: 48px;
+    display: block;
+    /* Фіксований розмір, як просили */
+    width: 28px; 
+    height: 38px;
+    /* Margin тут більше не потрібен, бо центрує обгортка */
 }
 
 .services-name {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
     color: var(--color-title);
-    line-height: 75px;
+    line-height: 1.2;
+    margin-bottom: 15px; 
+    letter-spacing: -0.5px;
 }
 
 .services-desc {
     font-family: var(--font-secondary);
-    line-height: 100%;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
 }
+
+/* Contact Section */
 .contact {
     padding: 90px 0 115px;
     background-color: var(--color-title);
 }
 
 .contact .section-title {
-    margin-bottom: 115px;
+    margin-bottom: 75px;
     color: var(--color-text-light);
 }
 
@@ -168,31 +183,37 @@ a {
 
 .contact-input,
 .contact-textarea {
-    padding: 18px 20px; 
+    padding: 20px;
     border: 1px solid #CCCCCC;
     background-color: var(--color-background);
     color: var(--color-title); 
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .contact-input::placeholder,
 .contact-textarea::placeholder {
     color: var(--color-placeholder);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-bold);
     font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .contact-textarea {
     flex: 1;
     min-height: 212px;
     resize: vertical;
-}
-.form-button-wrapper {
-    text-align: center;
-    margin-top: 30px; 
+    line-height: 1.5;
 }
 
 .contact-button {
+    display: block;
+    margin: 0 auto;
+    
     background-color: var(--color-accent);
     border: none;
     padding: 20px 40px;

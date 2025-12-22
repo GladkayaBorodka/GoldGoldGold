@@ -118,14 +118,14 @@ a {
 
 /* Коло для іконки */
 .services-icon-circle {
-    width: 76px; 
-    height: 76px;
+    width: 70px; 
+    height: 70px; 
     border: 3px solid var(--color-accent); 
     border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 25px auto; 
+    margin: 0 auto; 
 }
 
 .services-icon {
@@ -138,15 +138,16 @@ a {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
     color: var(--color-title);
-    line-height: 1.2;
-    margin-bottom: 15px; 
-    letter-spacing: -0.5px;
+    margin-top: 25px; 
+    margin-bottom: 25px; 
+    line-height: 75px; 
+    letter-spacing: -0.45px; 
 }
 
 .services-desc {
     font-family: var(--font-secondary);
     line-height: 1.4;
-    letter-spacing: 0.5px; 
+    letter-spacing: -0.35px;
 }
 
 /* Contact Section */
@@ -156,8 +157,9 @@ a {
 }
 
 .contact .section-title {
-    margin-bottom: 75px;
+    margin-bottom: 115px; 
     color: var(--color-text-light);
+    line-height: 100%; 
 }
 
 .form-row {
@@ -175,28 +177,32 @@ a {
 
 .contact-input,
 .contact-textarea {
-    padding: 18px 20px; 
+    padding: 13px 20px 22px; 
     border: 1px solid #CCCCCC;
     background-color: var(--color-background);
-    color: var(--color-title); 
+    color: #BBBBBB; 
     font-weight: var(--font-weight-bold);
     font-family: var(--font-main);
     text-transform: uppercase;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: -0.35px; 
     box-sizing: border-box; 
     appearance: none; 
     border-radius: 0;
 }
 
-/* Стилізація плейсхолдера */
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: none;
+}
+
 .contact-input::placeholder,
 .contact-textarea::placeholder {
     color: var(--color-placeholder);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-main);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: -0.35px; 
     font-size: 14px; 
     opacity: 1; 
 }
@@ -213,8 +219,7 @@ a {
     margin: 0 auto;
     background-color: var(--color-accent);
     border: none;
-    padding: 17px 40px; 
-    
+    padding: 18px 28px; 
     color: var(--color-text-light);
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
